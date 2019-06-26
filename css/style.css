@@ -51,7 +51,7 @@ video {
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   max-width: 1440px;
   height: auto;
 }
@@ -77,6 +77,10 @@ li {
   list-style: none;
 }
 
+input {
+  border: solid 1px lightgray;
+}
+
 @media only screen and (max-width: 768px) {
   #pc {
     display: none;
@@ -89,22 +93,170 @@ li {
   }
 }
 
+/* hamburger menu */
+nav.NavMenu {
+  position: fixed;
+  /*表示位置を固定*/
+  z-index: 2;
+  /*重ね順を変更*/
+  top: 0;
+  /*表示位置を指定*/
+  left: 0;
+  /*表示位置を指定*/
+  background: #fff;
+  /*背景を白にする*/
+  color: #000;
+  /*文字色を黒にする*/
+  text-align: center;
+  /*テキストを中央揃え*/
+  width: 100%;
+  /*全幅表示*/
+  transform: translateY(-100%);
+  /*ナビを上に隠す*/
+  transition: all 0.6s;
+  /*アニメーションの時間を指定*/
+  height: 100%;
+  opacity: 0.9;
+  padding-top: 100px;
+}
+
+nav.NavMenu p {
+  margin: 15px 0 5px 0;
+  font-size: 12px;
+}
+
+nav.NavMenu ul {
+  background: #fff;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+nav.NavMenu ul li {
+  font-family: "Righteous", cursive;
+  width: 200px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+nav.NavMenu ul li a {
+  font-size: 1.4rem;
+  display: block;
+  cursor: pointer;
+  padding: 1rem 0;
+}
+
+/*トグルボタンが押されたときに付与するクラス*/
+nav.NavMenu.active {
+  transform: translateY(0%);
+}
+
+/*トグルボタンのスタイルを指定*/
+.Toggle {
+  display: block;
+  position: fixed;
+  /* bodyに対しての絶対位置指定 */
+  right: 20px;
+  top: 48px;
+  width: 42px;
+  height: 42px;
+  cursor: pointer;
+  z-index: 3;
+  text-align: center;
+}
+
+.Toggle span {
+  display: block;
+  position: absolute;
+  width: 30px;
+  border-bottom: solid 1px gray;
+  -webkit-transition: 0.35s ease-in-out;
+  /*変化の速度を指定*/
+  -moz-transition: 0.35s ease-in-out;
+  /*変化の速度を指定*/
+  transition: 0.35s ease-in-out;
+  /*変化の速度を指定*/
+  left: 3.8px;
+}
+
+.Toggle span:nth-child(1) {
+  top: 7px;
+}
+
+.Toggle span:nth-child(2) {
+  top: 14px;
+}
+
+.Toggle span:nth-child(3) {
+  top: 21px;
+}
+
+
+/* 最初のspanをマイナス45度に */
+.Toggle.active span:nth-child(1) {
+  top: 18px;
+  left: 6px;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+/* 2番目と3番目のspanを45度に */
+.Toggle.active span:nth-child(2) {
+  top: 18px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.Toggle.active span:nth-child(3) {
+  display: none;
+}
+
+.Toggle.active span:nth-child(4) {
+  display: none;
+}
+
 .first-view {
   height: 100vh;
   width: 100vw;
 }
 
-.header {
-  padding: 3em 0 0 0;
-  position: relative;
+@media only screen and (max-width: 769px) {
+  .first-view {
+    height: auto;
+    width: 100vw;
+  }
 }
 
-.header h1 {
-  font-family: 'Righteous', cursive;
+.header {
+  padding: 3em 0;
+  position: relative;
+  text-align: center;
+}
+
+@media only screen and (max-width: 769px) {
+  .header {
+    padding: 5em 0;
+  }
+}
+
+.header h1 a {
+  font-family: "Righteous", cursive;
   font-size: 3.6rem;
   letter-spacing: 0.2em;
-  margin: 1em 0;
-  text-align: center;
+}
+
+@media only screen and (max-width: 769px) {
+  .header h1 a {
+    font-size: 2rem;
+  }
+}
+
+.nav {
+  margin-top: 4em;
 }
 
 .nav--flex {
@@ -145,7 +297,7 @@ li {
   right: -13px;
   text-align: center;
   top: -8px;
-  width: 20px
+  width: 20px;
 }
 
 .stock p {
@@ -155,8 +307,14 @@ li {
 }
 
 .parallax-window {
-  min-height: 100vh;
   background: transparent;
+  min-height: 100vh;
+}
+
+@media only screen and (max-width: 769px) {
+  .parallax-window {
+    height: 80vh;
+  }
 }
 
 .main-text {
@@ -166,11 +324,23 @@ li {
   width: 100%;
 }
 
+@media only screen and (max-width: 769px) {
+  .main-text {
+    padding: 30vh 0;
+  }
+}
+
 .main-text h2 {
-  font-family: 'Righteous', cursive;
+  font-family: "Righteous", cursive;
   font-size: 3.2rem;
   letter-spacing: 0.2em;
   margin-bottom: 1em;
+}
+
+@media only screen and (max-width: 769px) {
+  .main-text h2 {
+    font-size: 1.8rem;
+  }
 }
 
 .main-text h3 {
@@ -178,9 +348,21 @@ li {
   letter-spacing: 0.2em;
 }
 
+@media only screen and (max-width: 769px) {
+  .main-text h3 {
+    font-size: 1.2rem;
+  }
+}
+
 .contents {
   background-color: rgb(245, 245, 245);
   padding: 4em 0 20vh 0;
+}
+
+@media only screen and (max-width: 769px) {
+  .contents {
+    padding: 0;
+  }
 }
 
 .contents--flex {
@@ -196,16 +378,33 @@ li {
   width: 45vw;
 }
 
+@media only screen and (max-width: 769px) {
+
+  .about,
+  .product {
+    margin: 2em 0;
+    width: 80vw;
+  }
+}
+
 .about img {
   filter: grayscale(1);
 }
 
 .about h2,
 .product h2 {
-  font-family: 'Righteous', cursive;
+  font-family: "Righteous", cursive;
   font-size: 2.4rem;
   letter-spacing: 0.2em;
   margin: 30px 0;
+}
+
+@media only screen and (max-width: 769px) {
+
+  .about h2,
+  .product h2 {
+    font-size: 1.8rem;
+  }
 }
 
 .about h3,
@@ -214,6 +413,14 @@ li {
   font-size: 1.2rem;
   line-height: 2em;
   padding-right: 120px;
+}
+
+@media only screen and (max-width: 769px) {
+
+  .about h3,
+  .product h3 {
+    padding-right: 0;
+  }
 }
 
 .see-more-button {
@@ -238,16 +445,34 @@ li {
   text-align: center;
 }
 
+@media only screen and (max-width: 769px) {
+  .mission {
+    padding: 45vh 0 0 0;
+  }
+}
+
 .mission h2 {
   font-size: 1.6rem;
   letter-spacing: 0.2em;
 }
 
+@media only screen and (max-width: 769px) {
+  .mission h2 {
+    font-size: 1.2rem;
+  }
+}
+
 .mission h3 {
-  font-family: 'Righteous', cursive;
+  font-family: "Righteous", cursive;
   font-size: 3.2rem;
   letter-spacing: 0.2em;
   margin-top: 0.5em;
+}
+
+@media only screen and (max-width: 769px) {
+  .mission h3 {
+    font-size: 1.8rem;
+  }
 }
 
 .visit-our-shop {
@@ -257,10 +482,25 @@ li {
   width: 100%;
 }
 
+
+@media only screen and (max-width: 769px) {
+  .visit-our-shop {
+    margin: 0 auto;
+    padding: 20vh 0 30vh 0;
+    width: 80vw;
+  }
+}
+
 .visit-our-shop h2 {
-  font-family: 'Righteous', cursive;
+  font-family: "Righteous", cursive;
   font-size: 2rem;
   letter-spacing: 0.2em;
+}
+
+@media only screen and (max-width: 769px) {
+  .visit-our-shop h2 {
+    font-size: 1.8rem;
+  }
 }
 
 .visit-our-shop h3 {
@@ -279,6 +519,12 @@ li {
   transition: 0.5s;
 }
 
+@media only screen and (max-width: 769px) {
+  .online-shop-button {
+    background-color: #fff;
+  }
+}
+
 .online-shop-button:hover {
   background-color: #000;
   color: #fff;
@@ -287,6 +533,12 @@ li {
 .lineup {
   background-color: rgb(245, 245, 245);
   padding: 4em 0 20vh 0;
+}
+
+@media only screen and (max-width: 769px) {
+  .lineup {
+    padding: 4rem 0;
+  }
 }
 
 .lineup--flex {
@@ -302,6 +554,13 @@ li {
   width: 60vw;
 }
 
+@media only screen and (max-width: 769px) {
+  .lineup_item-l {
+    width: 80vw;
+    margin: 0;
+  }
+}
+
 .lineup_item-l:hover {
   opacity: 0.5;
 }
@@ -312,9 +571,22 @@ li {
   width: 29vw;
 }
 
+@media only screen and (max-width: 769px) {
+  .lineup_item-s {
+    width: 80vw;
+    margin: 10px 0;
+  }
+}
+
 .lineup_item-s--top {
   position: relative;
   margin-bottom: 1.8vw;
+}
+
+@media only screen and (max-width: 769px) {
+  .lineup_item-s--top {
+    margin-bottom: 0;
+  }
 }
 
 .lineup_item-s--top:hover {
@@ -326,9 +598,16 @@ li {
   margin-top: 1.8vw;
 }
 
+@media only screen and (max-width: 769px) {
+  .lineup_item-s--bottom {
+    margin-top: 10px;
+  }
+}
+
 .lineup_item-s--bottom:hover {
   opacity: 0.5;
 }
+
 
 .color-name {
   color: gray;
@@ -343,10 +622,16 @@ li {
 }
 
 .footer h2 {
-  font-family: 'Righteous', cursive;
+  font-family: "Righteous", cursive;
   font-size: 2.4rem;
   letter-spacing: 0.2em;
   margin: 3em 0 2em 0;
+}
+
+@media only screen and (max-width: 769px) {
+  .footer h2 {
+    font-size: 1.8rem;
+  }
 }
 
 .footer--flex {
@@ -372,6 +657,12 @@ li {
   margin: 5em;
 }
 
+@media only screen and (max-width: 769px) {
+  .info {
+    margin: 5em 0;
+  }
+}
+
 .info p a {
   color: gray;
   margin: 1em;
@@ -386,16 +677,36 @@ li {
   margin: 10em;
 }
 
+@media only screen and (max-width: 769px) {
+  .news-letter {
+    margin: 10em 0;
+  }
+}
+
 .news-letter p {
   font-size: 1.4rem;
   letter-spacing: 0.2em;
 }
 
+@media only screen and (max-width: 769px) {
+  .news-letter p {
+    font-size: 1rem;
+  }
+}
+
 .address-form {
+  border: solid 1px lightgray;
   letter-spacing: 0.2em;
   margin: 2em 1em 2em 0;
   padding: 2em 1em;
-  width: 200px
+  width: 200px;
+}
+
+@media only screen and (max-width: 769px) {
+  .address-form {
+    margin: 3em 0 1em 0;
+    width: 50vw;
+  }
 }
 
 .resister-button {
@@ -409,6 +720,13 @@ li {
   transition: 0.5s;
 }
 
+@media only screen and (max-width: 769px) {
+  .resister-button {
+    background-color: #fff;
+    margin: 2em 0 0 0;
+  }
+}
+
 .resister-button:hover {
   background-color: #000;
   color: #fff;
@@ -416,4 +734,454 @@ li {
 
 .copyright {
   margin-bottom: 3em;
+}
+
+/* about.html */
+
+.about-hero {
+  padding-top: 500px;
+  position: relative;
+}
+
+.about_title {
+  position: absolute;
+  left: 10vw;
+  top: 38vw;
+}
+
+@media only screen and (max-width: 769px) {
+  .about_title {
+    top: 50vw;
+    left: calc(50% - 50px);
+  }
+}
+
+.about_title h2 {
+  color: #fff;
+  font-family: "Righteous", cursive;
+  font-size: 4.8rem;
+  letter-spacing: 0.2em;
+}
+
+@media only screen and (max-width: 769px) {
+  .about_title h2 {
+    font-size: 1.8rem;
+  }
+}
+
+.about_text_wrapper {
+  height: 100%;
+  opacity: 0.8;
+  margin: 0 auto;
+  width: 50vw;
+}
+
+@media only screen and (max-width: 769px) {
+  .about_text_wrapper {
+    width: 80vw;
+  }
+}
+
+.about_text {
+  background-color: #fff;
+  border-radius: 5px;
+  height: 100%;
+  padding: 3em 0;
+  text-align: center;
+}
+
+.about_text h3 {
+  font-size: 2.4rem;
+  font-weight: bold;
+  line-height: 1.5em;
+  margin: 50px;
+  text-align: left;
+}
+
+@media only screen and (max-width: 769px) {
+  .about_text h3 {
+    font-size: 1.8rem;
+    margin: 50px 0
+  }
+}
+
+.about_text p {
+  font-size: 1.4rem;
+  line-height: 1.5em;
+  margin: 50px;
+  text-align: left;
+}
+
+@media only screen and (max-width: 769px) {
+  .about_text p {
+    font-size: 1.2rem;
+    margin: 50px 0;
+  }
+}
+
+.learn-more-button {
+  background-color: rgb(245, 245, 245);
+  border: solid 2px #000;
+  border-radius: 3px;
+  cursor: pointer;
+  font-weight: bold;
+  letter-spacing: 0.2em;
+  margin: 50px;
+  opacity: 0.8;
+  padding: 2em 4em;
+  transition: 0.5s;
+}
+
+@media only screen and (max-width: 769px) {
+  .learn-more-button {
+    background-color: #fff;
+  }
+}
+
+.learn-more-button:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+/* product.html */
+.product_title {
+  margin: 10vw 0 20vw 0;
+  text-align: center;
+}
+
+.product_title h3 {
+  font-family: "Righteous", cursive;
+  font-size: 3.2rem;
+  letter-spacing: 0.2em;
+  margin-top: 1em;
+}
+
+@media only screen and (max-width: 769px) {
+  .product_title h3 {
+    font-size: 1.8rem;
+  }
+}
+
+.product_title p {
+  font-size: 1.6rem;
+  letter-spacing: 0.2em;
+}
+
+@media only screen and (max-width: 769px) {
+  .product_title p {
+    font-size: 1.2rem;
+  }
+}
+
+.product_detail {
+  background-color: rgb(245, 245, 245);
+  padding-bottom: 2em;
+}
+
+.product_detail--flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.product_img,
+.product_text {
+  height: auto;
+  margin: 5em;
+  width: 30vw;
+}
+
+@media only screen and (max-width: 769px) {
+
+  .product_img,
+  .product_text {
+    margin: 4em 0;
+    width: 80vw;
+  }
+}
+
+.product_text h2 {
+  font-family: "Righteous", cursive;
+  font-size: 1.8rem;
+  letter-spacing: 0.2em;
+  margin-bottom: 2em;
+}
+
+.product_text h4 {
+  font-size: 1.2rem;
+  line-height: 2em;
+}
+
+.product_text ul {
+  margin-top: 2em;
+}
+
+.product_text ul li {
+  font-size: 1.4rem;
+  font-weight: bold;
+  line-height: 2em;
+  padding-bottom: 0.5em;
+}
+
+.product_text ul li span {
+  font-size: 1.2rem;
+  font-weight: normal;
+}
+
+.product_moredetail {
+  width: 25vw;
+  height: auto;
+  margin: 0 3em;
+  padding-top: 10em;
+}
+
+@media only screen and (max-width: 769px) {
+  .product_moredetail {
+    width: 80vw;
+    height: auto;
+    margin: 0;
+    padding-top: 0;
+  }
+}
+
+.product_moredetail h3 {
+  font-family: "Righteous", cursive;
+  font-size: 1.8rem;
+  letter-spacing: 0.2em;
+  margin-bottom: 2em;
+  text-align: center;
+}
+
+
+@media only screen and (max-width: 769px) {
+  .product_moredetail h3 {
+    margin-bottom: 0;
+    margin-top: 2em;
+  }
+}
+
+.product_moredetail p {
+  font-size: 1.2rem;
+  line-height: 2em;
+  padding: 3em 0;
+}
+
+.buy-now-button_wrapper {
+  margin: 3em;
+  text-align: center;
+}
+
+.buy-now-button {
+  background-color: rgb(245, 245, 245);
+  border: solid 2px #000;
+  border-radius: 3px;
+  cursor: pointer;
+  font-weight: bold;
+  letter-spacing: 0.2em;
+  margin: 3em 0;
+  opacity: 0.8;
+  padding: 2em 4em;
+  transition: 0.5s;
+}
+
+.buy-now-button:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+/* buy */
+.buy_container {
+  padding: 2em;
+}
+
+.buy_container--flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.buy-text,
+.buy-img {
+  height: auto;
+  width: 30vw;
+}
+
+@media only screen and (max-width: 769px) {
+
+  .buy-text,
+  .buy-img {
+    width: 80vw;
+  }
+}
+
+.buy-text {
+  padding-top: 8vw;
+}
+
+@media only screen and (max-width: 769px) {
+  .buy-text {
+    order: 2;
+  }
+}
+
+.buy-text h2 {
+  font-family: "Righteous", cursive;
+  font-size: 1.8rem;
+  letter-spacing: 0.2em;
+  margin-bottom: 1em;
+}
+
+.buy-img {
+  position: relative;
+}
+
+@media only screen and (max-width: 769px) {
+  .buy-text {
+    order: 1;
+  }
+}
+
+.buy-img p {
+  font-weight: bold;
+  left: 2vw;
+  position: absolute;
+  top: 2vw;
+}
+
+.price {
+  font-size: 1.4rem;
+  line-height: 2em;
+  margin-bottom: 2em;
+}
+
+.quantity {
+  font-size: 1rem;
+  line-height: 2em;
+}
+
+.quantity-form {
+  width: 50px;
+  height: 20px;
+}
+
+.add-button {
+  border: solid 2px #000;
+  border-radius: 3px;
+  cursor: pointer;
+  font-weight: bold;
+  letter-spacing: 0.2em;
+  margin: 2em 0;
+  padding: 2em 4em;
+  transition: 0.5s;
+}
+
+.add-button:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.buy_container--bg-gray {
+  background-color: rgb(245, 245, 245);
+}
+
+/* contact */
+
+.contact {
+  margin: 0 auto;
+  width: 30vw;
+}
+
+@media only screen and (max-width: 769px) {
+  .contact {
+    width: 80vw;
+  }
+}
+
+.contact h2 {
+  font-family: "Righteous", cursive;
+  font-size: 2.4rem;
+  font-weight: bold;
+  letter-spacing: 0.2em;
+  line-height: 1.5em;
+  margin: 10vw;
+  text-align: center;
+}
+
+@media only screen and (max-width: 769px) {
+  .contact h2 {
+    font-size: 1.8rem;
+  }
+}
+
+.contact--flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+fieldset {
+  border: none;
+}
+
+legend,
+label {
+  font-size: 1.2rem;
+  margin-bottom: 1em;
+}
+
+textarea {
+  border: solid 1px lightgray;
+  margin-top: 1em;
+}
+
+.contact_item_wrapper {
+  color: gray;
+  letter-spacing: 0.05em;
+  margin-bottom: 3em;
+}
+
+.first-name,
+.last-name {
+  height: 30px;
+  width: 13vw;
+}
+
+@media only screen and (max-width: 769px) {
+
+  .first-name,
+  .last-name {
+    width: 35vw;
+  }
+}
+
+.email-address,
+.subject {
+  height: 30px;
+  width: 100%;
+}
+
+.message {
+  height: 120px;
+  width: 100%;
+}
+
+.submit-button_wrapper {
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.submit-button {
+  border: solid 2px #000;
+  border-radius: 3px;
+  cursor: pointer;
+  font-weight: bold;
+  letter-spacing: 0.2em;
+  margin: 30px 0;
+  padding: 2em 4em;
+  transition: 0.5s;
+}
+
+.submit-button:hover {
+  background-color: #000;
+  color: #fff;
 }

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="canonical" href="https://sands_design.net" />
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Marshall Head Phone</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Marshall HEad Phone" />
+  <link rel=" stylesheet" href="slick/slick.css" />
+  <link rel=" stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Righteous&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script type="text/javascript" src="slick/slick.min.js"></script>
+  <script src="js/parallax.min.js"></script>
+  <script src="https://kit.fontawesome.com/8b64a41d0d.js"></script>
+</head>
+
+<body>
+  <header class="header">
+    <h1><a href="index.html">MARSHALL CO.</a></h1>
+    <nav id="pc" class="nav">
+      <ul class="nav--flex">
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="product.html">PRODUCT</a></li>
+        <li><a href="buy.html">SHOP</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+      </ul>
+    </nav>
+    <div id="pc" class="cart"><a href=""><img src="images/cart.png" alt=""></a>
+      <div class="stock">
+        <p>0</p>
+      </div>
+    </div>
+
+    <div id="smp">
+      <nav class="NavMenu">
+        　<ul>
+          <li><a href="index.html">HOME</a></li>
+          　　<li><a href="about.html">ABOUT</a></li>
+          　　<li><a href="product.html">PRODUCT</a></li>
+          　　<li><a href="buy.html">SHOP</a></li>
+          　　<li><a href="contact.html">CONTACT</a></li>
+        </ul>
+        <div class="icon footer--flex">
+          <a><i class="far fa-envelope"></i></a>
+          <a><i class="fab fa-instagram"></i></a>
+          <a><i class="fab fa-facebook-f"></i></a>
+          <a><i class="fab fa-pinterest"></i></a>
+        </div>
+      </nav>
+      <div class="Toggle" id="smp">
+        　　<span></span>
+        　　<span></span>
+        <span></span>
+      </div>
+    </div>
+
+  </header>
+  <div><img src="images/product-lineup.jpg" alt=""></div>
+  </div>
+  <div class="product_title">
+    <p>OUR NEW LINEUP 2019 S/S</p>
+    <h3>Major III Bluetooth</h3>
+  </div>
+  <section class="product_detail product_detail--flex">
+    <div id="slide-div" class="product_img">
+      <img src="images/product-4.jpg" alt="">
+      <img src="images/product-5.jpg" alt="">
+      <img src="images/product-3.jpg" alt="">
+      <img src="images/product-2.jpg" alt="">
+    </div>
+    <div class="product_text">
+      <h2>PRODUCT</h2>
+      <h4>Major III Bluetooth is the next chapter in the revolutionary history of Marshall. Major III Bluetooth offers
+        you the freedom and convenience of wireless Bluetooth aptX technology and 30+ hours of playtime on a single
+        charge.</h4>
+      <ul>
+        <li>FREQUENCY RESPONSE
+          <span><br>20 Hz-20kHz</span>
+        <li>DRIVER TYPE
+          <span><br>Dynamic</span>
+        <li>DRIVER IMPEDANCE
+          <span><br>32 Ω</span>
+        <li>DRIVERS
+          <span><br>40 mm</span>
+      </ul>
+    </div>
+  </section>
+  <section class="product_detail">
+    <div class="product_detail--flex">
+      <div class="product_moredetail">
+        <h3>BLUETOOTH APTX</h3>
+        <p>Bluetooth aptX gives you exceptional audio quality and the freedom and convenience to move within 30 feet of
+          wireless listening range.
+        </p>
+      </div>
+      <div class="product_moredetail">
+        <h3>30+ HOURS OF PLAYTIME</h3>
+        <p>The Major III Bluetooth keeps the music going strong with over 30 hours of wireless playtime on a single
+          charge, leaving competitors in the dust.
+        </p>
+      </div>
+      <div class="product_moredetail">
+        <h3>ICONIC SOUND</h3>
+        <p>Major III Bluetooth features 40 mm dynamic drivers that are custom tuned for enhanced bass, smooth mids and
+          clear highs.
+        </p>
+      </div>
+    </div>
+    <div class="buy-now-button_wrapper">
+      <button class="buy-now-button" type="button" onclick="location.href='./buy.html'">BUY NOW</button>
+    </div>
+  </section>
+
+
+  <footer class="footer">
+    <h2>MARSHALL CO.</h2>
+    <div class="icon footer--flex">
+      <a><i class="far fa-envelope"></i></a>
+      <a><i class="fab fa-instagram"></i></a>
+      <a><i class="fab fa-facebook-f"></i></a>
+      <a><i class="fab fa-pinterest"></i></a>
+    </div>
+    <div class="info footer--flex">
+      <p><a href="contact.html">CONTACT</a></p>
+      <p><a>FAQ</a></p>
+      <p><a>BLOG</a></p>
+    </div>
+    <div class="news-letter">
+      <p>SUBSCRIBE OUR NEWS LETTER</p>
+      <form method="post" action="">
+        <input class="address-form" type="text" placeholder="EMAIL ADDRESS">
+        <input class="resister-button" type="button" value="REGISTER">
+      </form>
+    </div>
+    <p class="copyright">®️SANDS DESIGN &amp; MARSHALL ALL RIGHT RESERVED 2019</p>
+  </footer>
+
+  <script type="text/javascript">
+    $(function () {
+      $('.Toggle').click(function () {
+        $(this).toggleClass('active');
+
+        if ($(this).hasClass('active')) {
+          $('.NavMenu').addClass('active');
+        } else {
+          $('.NavMenu').removeClass('active');
+        }
+      });
+    });
+  </script>
+
+  <script>
+    $(document).ready(function () {
+      $("#slide-div").slick({
+        arrows: false,
+        autoplay: true,
+        infinite: true,
+        autoplaySpeed: 1500,
+        speed: 500,
+        fade: true,
+        cssEase: 'linear',
+        noSwiping: true,
+      });
+    });
+  </script>
+
+</body>
+
+</html>

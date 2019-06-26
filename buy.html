@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="canonical" href="https://sands_design.net" />
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Marshall Head Phone</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Marshall HEad Phone" />
+  <link rel=" stylesheet" href="slick/slick.css" />
+  <link rel=" stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Righteous&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script type="text/javascript" src="slick/slick.min.js"></script>
+  <script src="js/parallax.min.js"></script>
+  <script src="https://kit.fontawesome.com/8b64a41d0d.js"></script>
+</head>
+
+<body>
+  <div class="first-view">
+    <header class="header">
+      <h1><a>MARSHALL CO.</a></h1>
+      <nav id="pc" class="nav">
+        <ul class="nav--flex">
+          <li><a href="about.html">ABOUT</a></li>
+          <li><a href="product.html">PRODUCT</a></li>
+          <li><a href="buy.html">SHOP</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+      </nav>
+      <div id="pc" class="cart"><a href=""><img src="images/cart.png" alt=""></a>
+        <div class="stock">
+          <p>0</p>
+        </div>
+      </div>
+
+      <div id="smp">
+        <nav class="NavMenu">
+          　<ul>
+            <li><a href="index.html">HOME</a></li>
+            　　<li><a href="about.html">ABOUT</a></li>
+            　　<li><a href="product.html">PRODUCT</a></li>
+            　　<li><a href="buy.html">SHOP</a></li>
+            　　<li><a href="contact.html">CONTACT</a></li>
+          </ul>
+          <div class="icon footer--flex">
+            <a><i class="far fa-envelope"></i></a>
+            <a><i class="fab fa-instagram"></i></a>
+            <a><i class="fab fa-facebook-f"></i></a>
+            <a><i class="fab fa-pinterest"></i></a>
+          </div>
+        </nav>
+        <div class="Toggle" id="smp">
+          　　<span></span>
+          　　<span></span>
+          <span></span>
+        </div>
+      </div>
+
+    </header>
+
+    <section class="buy">
+      <div class="buy_container buy_container--flex buy_container--bg-gray">
+        <div class="buy-text">
+          <h2>Major III Bluetooth</h2>
+          <p class="price">$149</p>
+          <p class="quantity">QUANTITY:</p>
+          <form><input class="quantity-form" type="number" placeholder=""></form>
+          <form><input class="add-button" type="button" value="ADD TO CART"></form>
+        </div>
+        <div id="black" class="buy-img">
+          <p>BLACK</p>
+          <img src="images/product-black.jpg" alt="">
+        </div>
+      </div>
+      <div class="buy_container buy_container--flex">
+        <div class="buy-text">
+          <h2>Major III Bluetooth</h2>
+          <p class="price">$149</p>
+          <p class="quantity">QUANTITY:</p>
+          <form><input class="quantity-form" type="number" placeholder=""></form>
+          <form><input class="add-button" type="button" value="ADD TO CART"></form>
+        </div>
+        <div id="brown" class="buy-img">
+          <p>BROWN</p>
+          <img src="images/product-brown.jpg" alt="">
+        </div>
+      </div>
+      <div class="buy_container buy_container--flex buy_container--bg-gray">
+        <div class="buy-text">
+          <h2>Major III Bluetooth</h2>
+          <p class="price">$149</p>
+          <p class="quantity">QUANTITY:</p>
+          <form><input class="quantity-form" type="number" placeholder=""></form>
+          <form><input class="add-button" type="button" value="ADD TO CART"></form>
+        </div>
+        <div id="white" class="buy-img">
+          <p>WHITE</p>
+          <img src="images/product-white.jpg" alt="">
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <h2>MARSHALL CO.</h2>
+      <div class="icon footer--flex">
+        <a><i class="far fa-envelope"></i></a>
+        <a><i class="fab fa-instagram"></i></a>
+        <a><i class="fab fa-facebook-f"></i></a>
+        <a><i class="fab fa-pinterest"></i></a>
+      </div>
+      <div class="info footer--flex">
+        <p><a href="contact.html">CONTACT</a></p>
+        <p><a>FAQ</a></p>
+        <p><a>BLOG</a></p>
+      </div>
+      <div class="news-letter">
+        <p>SUBSCRIBE OUR NEWS LETTER</p>
+        <form method="post" action="">
+          <input class="address-form" type="text" placeholder="EMAIL ADDRESS">
+          <input class="resister-button" type="button" value="REGISTER">
+        </form>
+      </div>
+      <p class="copyright">®️SANDS DESIGN &amp; MARSHALL ALL RIGHT RESERVED 2019</p>
+    </footer>
+
+    <script type="text/javascript">
+      $(function () {
+        $('.Toggle').click(function () {
+          $(this).toggleClass('active');
+
+          if ($(this).hasClass('active')) {
+            $('.NavMenu').addClass('active');
+          } else {
+            $('.NavMenu').removeClass('active');
+          }
+        });
+      });
+    </script>
+
+    <script>
+      $(document).ready(function () {
+        $("#slide-div").slick({
+          arrows: false,
+          autoplay: true,
+          infinite: true,
+          autoplaySpeed: 1500,
+          speed: 500,
+          fade: true,
+          cssEase: 'linear',
+          noSwiping: true,
+        });
+      });
+    </script>
+
+</body>
+
+</html>

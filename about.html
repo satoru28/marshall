@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="canonical" href="https://sands_design.net" />
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Marshall Head Phone</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Marshall HEad Phone" />
+  <link rel=" stylesheet" href="slick/slick.css" />
+  <link rel=" stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Righteous&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script type="text/javascript" src="slick/slick.min.js"></script>
+  <script src="js/parallax.min.js"></script>
+  <script src="https://kit.fontawesome.com/8b64a41d0d.js"></script>
+</head>
+
+<body>
+  <header class="header">
+    <h1><a href="index.html">MARSHALL CO.</a></h1>
+    <nav id="pc" class="nav">
+      <ul class="nav--flex">
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="product.html">PRODUCT</a></li>
+        <li><a href="buy.html">SHOP</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+      </ul>
+    </nav>
+    <div id="pc" class="cart"><a href=""><img src="images/cart.png" alt=""></a>
+      <div class="stock">
+        <p>0</p>
+      </div>
+    </div>
+
+    <div id="smp">
+      <nav class="NavMenu">
+        　<ul>
+          <li><a href="index.html">HOME</a></li>
+          　　<li><a href="about.html">ABOUT</a></li>
+          　　<li><a href="product.html">PRODUCT</a></li>
+          　　<li><a href="buy.html">SHOP</a></li>
+          　　<li><a href="contact.html">CONTACT</a></li>
+        </ul>
+        <div class="icon footer--flex">
+          <a><i class="far fa-envelope"></i></a>
+          <a><i class="fab fa-instagram"></i></a>
+          <a><i class="fab fa-facebook-f"></i></a>
+          <a><i class="fab fa-pinterest"></i></a>
+        </div>
+      </nav>
+      <div class="Toggle" id="smp">
+        　　<span></span>
+        　　<span></span>
+        <span></span>
+      </div>
+    </div>
+
+  </header>
+  <section class="about-hero parallax-window" data-parallax="scroll" data-image-src="images/about-long.jpg"></section>
+  <div class="about_title">
+    <h2>ABOUT US</h2>
+  </div>
+  <div class="about_text_wrapper">
+    <div class="about_text">
+      <h3>We provide high quality products, headphone, speakers, accessories and anything special you offered. If you
+        love music, please contact us first and check our products. They will surely make you feel cool and great.</h3>
+      <p>This is the perfect place for generating visitor interest by going into more detail about yourself, your
+        project, or your mission. You can talk about how your idea started, how long you’ve been working on it, what it
+        stands for, and why it’s important. The more specific you are, the more visitors can engage with what you do.
+        This
+        is also an opportunity to answer any questions they may have about you or your work.
+
+        Foster’s long, scrolling homepage is actually an Index Page, which stacks multiple pages vertically. Under a
+        Foster Index Page, any regular Page with a background image supports parallax scrolling, a 3D effect that
+        creates
+        depth and immersion. Learn more about Foster’s Index Page here.
+
+        The Foster template supports three separate navigation areas: two in the site header section and one in the
+        footer
+        section. All navigation areas can be styled independently. For example, to give prominence to certain pages in
+        your site, you can include them in the header navigation. Other pages with secondary importance can go in the
+        footer. You can create drop-down menus by placing pages in a folder in the Pages Panel. Learn more about
+        Foster’s
+        navigation features here.
+
+        With any Squarespace template, you can use Spacer Blocks to tailor the layout of your pages. For more
+        information
+        on blocks, click here. The following is placeholder text known as “lorem ipsum,” which is scrambled Latin used
+        by
+        designers to mimic real copy. Lorem ipsum dolor sit amet…</p>
+      <button class="learn-more-button" type="button" onclick="location.href='./product.html'">LEARN MORE OUR
+        PRODUCT</button>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <h2>MARSHALL CO.</h2>
+    <div class="icon footer--flex">
+      <a><i class="far fa-envelope"></i></a>
+      <a><i class="fab fa-instagram"></i></a>
+      <a><i class="fab fa-facebook-f"></i></a>
+      <a><i class="fab fa-pinterest"></i></a>
+    </div>
+    <div class="info footer--flex">
+      <p><a href="contact.html">CONTACT</a></p>
+      <p><a>FAQ</a></p>
+      <p><a>BLOG</a></p>
+    </div>
+    <div class="news-letter">
+      <p>SUBSCRIBE OUR NEWS LETTER</p>
+      <form method="post" action="">
+        <input class="address-form" type="text" placeholder="EMAIL ADDRESS">
+        <input class="resister-button" type="button" value="REGISTER">
+      </form>
+    </div>
+    <p class="copyright">®️SANDS DESIGN &amp; MARSHALL ALL RIGHT RESERVED 2019</p>
+  </footer>
+
+  <script type="text/javascript">
+    $(function () {
+      $('.Toggle').click(function () {
+        $(this).toggleClass('active');
+
+        if ($(this).hasClass('active')) {
+          $('.NavMenu').addClass('active');
+        } else {
+          $('.NavMenu').removeClass('active');
+        }
+      });
+    });
+  </script>
+
+  <script>
+    $(document).ready(function () {
+      $("#slide-div").slick({
+        arrows: false,
+        autoplay: true,
+        infinite: true,
+        autoplaySpeed: 1500,
+        speed: 500,
+        fade: true,
+        cssEase: 'linear',
+        noSwiping: true,
+      });
+    });
+  </script>
+
+</body>
+
+</html>
