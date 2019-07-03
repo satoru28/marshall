@@ -313,7 +313,7 @@ nav.NavMenu.active {
 
 @media only screen and (max-width: 769px) {
   .parallax-window {
-    min-height: 80vh;
+    min-height: 100vh;
   }
 }
 
