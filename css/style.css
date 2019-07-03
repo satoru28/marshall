@@ -313,7 +313,7 @@ nav.NavMenu.active {
 
 @media only screen and (max-width: 769px) {
   .parallax-window {
-    height: 80vh;
+    min-height: 80vh;
   }
 }
 
@@ -326,7 +326,7 @@ nav.NavMenu.active {
 
 @media only screen and (max-width: 769px) {
   .main-text {
-    padding: 30vh 0;
+    padding: 0 0 10em 0;
   }
 }
 
